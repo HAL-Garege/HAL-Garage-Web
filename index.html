@@ -1,230 +1,34 @@
-<!doctype html>
-<html lang="es">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#06152b">
-<meta name="description" content="HAL Garage Car Wash, Car Detailing & Fleet Solutions. Servicios, detailing y soluciones corporativas.">
-<title>HAL Garage | Car Wash & Detailing</title>
-<style>
-:root{--bg:#06152b;--panel:#0b2342;--panel2:#0d2d52;--blue:#087ee8;--cyan:#35c7ff;--silver:#e2e9f2;--muted:#b3c3d7;--line:#244565;--white:#f8fbff}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
-header{position:sticky;top:0;z-index:20;background:#041126f2;backdrop-filter:blur(12px);border-bottom:1px solid #1b3b5e}.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.logo{width:148px;height:auto;display:block;border-radius:3px}.navlinks{display:flex;gap:17px;align-items:center;font-size:.88rem}.navlinks a:hover{color:var(--cyan)}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:8px;background:linear-gradient(110deg,#087be8,#22baff);font-weight:800;color:white;border:0;cursor:pointer}.btn.alt{background:transparent;border:1px solid #47749d}.hamb{display:none;background:transparent;border:1px solid var(--line);color:white;border-radius:7px;padding:8px 11px;font-size:1.1rem}
-.hero{padding:66px 0;background:radial-gradient(ellipse at 78% 20%,#0a4c88 0,transparent 42%),linear-gradient(120deg,#041126,#082344 60%,#041126);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.19em;color:var(--cyan);font-weight:800}.hero h1{font-size:clamp(2.5rem,5vw,4.7rem);line-height:1.03;letter-spacing:-.04em;margin:13px 0 18px}.hero h1 em{font-style:normal;color:var(--cyan)}.hero p,.intro{color:var(--muted);font-size:1.05rem}.hero-logo{width:100%;border-radius:14px;border:1px solid #23517d;box-shadow:0 25px 60px #0008}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:23px}.stats{border-block:1px solid #1a3c60;background:#071a32}.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:center;padding:18px 0}.statgrid b{display:block}.statgrid span{color:var(--muted);font-size:.85rem}
-section{padding:70px 0}.head{max-width:760px;margin-bottom:30px}.head.center{text-align:center;margin:0 auto 32px}.head h2{font-size:clamp(1.9rem,3.5vw,2.8rem);line-height:1.1;margin:8px 0 12px}.head p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:linear-gradient(145deg,#0d2949,#081a31);border:1px solid var(--line);border-radius:13px;padding:23px}.card h3{margin:0 0 8px}.card p{color:var(--muted);margin:0}.symbol{font-size:1.5rem;color:var(--cyan);background:#087be826;border-radius:10px;width:45px;height:45px;display:grid;place-items:center;margin-bottom:14px}.price{font-weight:900;font-size:1.35rem;color:#65d0ff;margin-top:13px}.price small{font-size:.78rem;color:var(--muted);font-weight:500}.light-section{background:linear-gradient(120deg,#071a32,#0a2442)}.catalog-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:center}.catalog-image{width:100%;display:block;border-radius:12px;border:1px solid #31577b;box-shadow:0 20px 40px #0005}.corp{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;background:#081d36;border:1px solid #214c73;border-radius:16px;padding:28px}.corp img{width:100%;border-radius:10px;border:1px solid #31577b}.tagrow{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.tag{border:1px solid #2b5d87;border-radius:99px;padding:6px 11px;color:#c5ebff;font-size:.82rem}.halito{display:grid;grid-template-columns:.75fr 1.25fr;gap:30px;align-items:center}.halito-img{width:100%;max-width:300px;display:block;margin:auto;border-radius:14px;background:white;border:1px solid #32618c}.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.gallery img{width:100%;border-radius:12px;border:1px solid var(--line)}.gallery .cap{color:var(--muted);font-size:.85rem;margin-top:7px}.clubbox{border:1px solid #2b5e88;border-radius:16px;padding:30px;background:radial-gradient(ellipse at 90% 5%,#0b4a7a,#071a31 60%);display:flex;align-items:center;justify-content:space-between;gap:22px}.formgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}.box{background:#0a213e;border:1px solid var(--line);border-radius:13px;padding:24px}.field{margin:12px 0}.field label{display:block;color:#c6d5e7;font-size:.9rem;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;padding:12px;border-radius:7px;background:#06172c;border:1px solid #2b4d6e;color:white;font:inherit}.field textarea{min-height:85px}.box p{color:var(--muted)}.muted{color:var(--muted)}.note{font-size:.8rem;color:#8da8c4;margin-top:12px}footer{background:#030d1c;border-top:1px solid var(--line);padding:26px 0;color:#9fb3ca;font-size:.88rem}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.foot b{color:white;letter-spacing:.1em}
-@media(max-width:900px){.navlinks{gap:10px;font-size:.78rem}.logo{width:120px}.hero-grid,.catalog-layout,.corp,.halito,.formgrid{grid-template-columns:1fr}.hero-logo{max-width:620px}.corp img{max-height:370px;object-fit:contain;background:#fff}.cards{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:650px){.nav{min-height:68px}.logo{width:124px}.hamb{display:block}.navlinks{display:none;position:absolute;top:68px;left:0;right:0;background:#041126;padding:15px 5%;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.navlinks a{padding:6px 0;font-size:.95rem}.nav>.btn{display:none}.hero{padding:45px 0}.hero h1{font-size:2.6rem}section{padding:52px 0}.cards,.gallery,.statgrid{grid-template-columns:1fr}.clubbox{align-items:flex-start;flex-direction:column}.actions .btn{width:100%}.corp{padding:18px}}
-
-/* Header brand lockup v3 */
-.brandbar{background:linear-gradient(110deg,#030d1c,#071d39);border-bottom:1px solid #17395e}.brandrow{min-height:126px;display:flex;align-items:center;gap:22px;padding:16px 0}.brandlogo{width:210px;max-height:96px;object-fit:contain;border-radius:4px;display:block}.brandtext{border-left:1px solid #285078;padding-left:22px}.brandname{font-size:clamp(2rem,4vw,3.3rem);font-weight:950;line-height:.98;letter-spacing:.04em}.brandname .hal{color:#f4f7fb}.brandname .garage{color:#168eff}.branddescriptor{font-size:clamp(.72rem,1.3vw,.95rem);font-weight:800;letter-spacing:.16em;color:#e8eef7;margin-top:8px;text-transform:uppercase}.brandslogan{font-size:.91rem;color:#a9c8e7;margin-top:7px}.brandaccent{height:3px;background:linear-gradient(90deg,#031026,#087ee8,#38d0ff,#06152b)}.navbar{background:#071a32;border-bottom:1px solid #244b70;position:sticky;top:0;z-index:50;box-shadow:0 8px 22px #0002}.navrow{display:flex;align-items:center;min-height:54px}.navlinks{display:flex;align-items:center;justify-content:space-between;gap:13px;width:100%;font-size:.82rem;font-weight:700;color:#e1ebf7}.navlinks a{padding:16px 0;border-bottom:2px solid transparent;white-space:nowrap}.navlinks a:hover{color:#43caff;border-color:#168eff}.navlinks .nav-cta{background:#087ee8;padding:8px 13px;border:0;border-radius:7px}.menu{display:none;background:transparent;color:white;border:1px solid #315577;border-radius:7px;padding:8px 12px}@media(max-width:950px){.brandlogo{width:165px}.navlinks{gap:8px;font-size:.74rem}}@media(max-width:680px){.brandrow{min-height:95px;gap:12px}.brandlogo{width:100px}.brandtext{padding-left:12px}.brandname{font-size:1.7rem}.branddescriptor{font-size:.55rem;letter-spacing:.08em}.brandslogan{font-size:.72rem}.navrow{min-height:50px}.menu{display:block}.navlinks{display:none;position:absolute;top:50px;left:0;right:0;background:#06152b;padding:13px 5%;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid #244665}.navlinks.open{display:flex}.navlinks a{padding:10px 0}.navlinks .nav-cta{text-align:center;margin-top:6px}}
-
-/* Responsive cleanup: consistent navigation, spacing and image fallback support */
-img{max-width:100%;height:auto}
-.hero-grid,.catalog-layout,.corp,.halito,.formgrid{min-width:0}
-.card,.box,.corp,.clubbox{min-width:0}
-.catalog-image,.corp img,.gallery img,.hero-logo{object-fit:contain}
-@media(max-width:1100px){
-  .navrow{position:relative;justify-content:flex-start}
-  .menu{display:block}
-  .navlinks{display:none;position:absolute;top:50px;left:0;right:0;width:100%;background:#06152b;padding:12px 5%;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;border:1px solid #244665;border-top:0;box-shadow:0 12px 24px #0005;z-index:60}
-  .navlinks.open{display:flex}
-  .navlinks a{white-space:normal;padding:11px 0;font-size:.95rem;border-bottom:1px solid #173655}
-  .navlinks .nav-cta{text-align:center;margin-top:8px}
-}
-@media(min-width:1101px){
-  .menu{display:none!important}
-  .navlinks{display:flex!important;position:static;width:100%;padding:0;border:0;box-shadow:none;flex-direction:row;align-items:center}
-}
-@media(max-width:680px){
-  .brandrow{align-items:center}
-  .brandlogo{width:86px}
-  .brandtext{min-width:0}
-  .brandname{font-size:clamp(1.35rem,6vw,1.7rem)}
-  .branddescriptor{line-height:1.35}
-  .brandslogan{line-height:1.3}
-  .hero-grid{gap:24px}
-  .hero-logo{max-height:300px;object-fit:contain}
-  .catalog-layout{gap:20px}
-  .catalog-image{max-height:72vh;object-fit:contain}
-  .corp{gap:18px}
-  .corp img{max-height:62vh;object-fit:contain}
-  .halito-img{max-width:230px}
-  .gallery img{max-height:360px;object-fit:contain}
-  .actions{flex-direction:column}
-  .actions .btn{width:100%}
-  .statgrid{gap:10px}
-}
-
-
-/* Ajustes finales de navegación y presentación */
-:root{scroll-padding-top:115px}
-.brandbar{position:relative}
-.navbar{top:0}
-.navrow{position:relative;gap:12px}
-.menu{font:700 .95rem Arial,Helvetica,sans-serif;cursor:pointer;min-height:42px;align-items:center;justify-content:center;gap:8px;touch-action:manipulation}
-.menu:focus-visible,.navlinks a:focus-visible,.btn:focus-visible{outline:3px solid #43caff;outline-offset:3px}
-.navlinks{min-width:0}
-.hero-grid>div,.catalog-layout>div,.corp>div,.halito>div,.formgrid>div,.formgrid>form{min-width:0}
-section{scroll-margin-top:112px}
-.gallery>div{min-width:0;background:#081d36;border:1px solid var(--line);border-radius:12px;padding:10px}
-.gallery img{display:block;width:100%;height:clamp(190px,26vw,330px);object-fit:contain;background:#06152b}
-.catalog-image{background:#06152b;max-height:780px;object-fit:contain}
-.corp img{display:block;max-height:640px;object-fit:contain;background:#06152b}
-.hero-logo{display:block;max-height:520px;object-fit:contain;background:#06152b}
-@media(max-width:1100px){
-  .navrow{min-height:56px;justify-content:flex-start}
-  .menu{display:inline-flex!important;position:relative;z-index:62}
-  .navlinks{display:none!important;position:absolute!important;top:100%;left:0;right:0;width:100%;max-height:calc(100dvh - 150px);overflow-y:auto;background:#041126;padding:12px 5%;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:0!important;border:1px solid #244665;border-top:0;border-radius:0 0 12px 12px;box-shadow:0 14px 28px #0008;z-index:61}
-  .navlinks.open{display:flex!important}
-  .navlinks a{display:block;white-space:normal;padding:12px 0;font-size:.95rem;border-bottom:1px solid #173655}
-  .navlinks .nav-cta{text-align:center;margin-top:8px;border:0}
-}
-@media(min-width:1101px){
-  .menu{display:none!important}
-  .navlinks{display:flex!important;position:static!important;max-height:none;overflow:visible;padding:0;border:0;box-shadow:none;flex-direction:row!important;align-items:center!important;justify-content:space-between!important}
-}
-@media(max-width:680px){
-  .brandrow{padding:12px 0;gap:10px}
-  .brandlogo{width:78px}
-  .brandtext{padding-left:10px}
-  .brandname{font-size:clamp(1.25rem,5.7vw,1.65rem);letter-spacing:.01em}
-  .branddescriptor{font-size:.52rem;letter-spacing:.045em}
-  .brandslogan{font-size:.69rem}
-  .hero{padding:38px 0}
-  .hero h1{font-size:clamp(2.15rem,10vw,2.7rem)}
-  section{padding:44px 0}
-  .cards,.gallery,.statgrid{grid-template-columns:1fr}
-  .catalog-image{max-height:none}
-  .corp img{max-height:none}
-  .gallery img{height:260px}
-  .hero-logo{max-height:320px}
-  .actions{flex-direction:column}
-  .actions .btn{width:100%}
-  .clubbox{padding:22px}
-}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-
-
-/* Menú desplegable de servicios */
-.nav-dropdown{position:relative;display:block}
-.nav-dropbtn{display:flex;align-items:center;gap:7px;background:transparent;color:inherit;border:0;border-bottom:2px solid transparent;padding:16px 0;font:inherit;font-weight:700;cursor:pointer;white-space:nowrap}
-.nav-dropbtn:hover,.nav-dropbtn:focus-visible{color:#43caff;border-color:#168eff}
-.nav-submenu{display:none;position:absolute;top:100%;left:-12px;min-width:255px;padding:8px 12px;background:#041126;border:1px solid #244665;border-radius:0 0 10px 10px;box-shadow:0 14px 28px #0008;z-index:70}
-.nav-dropdown.submenu-open .nav-submenu{display:block}
-.nav-submenu a{display:block;padding:10px 8px!important;border-bottom:1px solid #173655!important;white-space:normal!important}
-.nav-submenu a:last-child{border-bottom:0!important}
-.service-category{padding:54px 0;border-bottom:1px solid #183a5d}
-.service-category:nth-of-type(even){background:#081d36}
-.service-category .category-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:26px;align-items:center}
-.service-category h2{font-size:clamp(1.65rem,3vw,2.4rem);line-height:1.12;margin:8px 0 12px}
-.service-category p{color:var(--muted)}
-.service-photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.service-photo{margin:0;background:#0a213e;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.service-photo img{display:block;width:100%;height:clamp(150px,20vw,245px);object-fit:cover;background:#06152b}
-.service-photo figcaption{padding:10px 12px;color:#d9e9f9;font-size:.9rem}
-.category-link{display:inline-flex;margin-top:8px;color:#5fd0ff;font-weight:800}
-@media(min-width:1101px){.nav-submenu{top:calc(100% - 1px)}}
-@media(max-width:1100px){
- .nav-dropdown{width:100%;border-bottom:1px solid #173655}
- .nav-dropbtn{width:100%;justify-content:space-between;padding:12px 0;border:0;font-size:.95rem}
- .nav-submenu{position:static;min-width:0;padding:0 0 5px 12px;border:0;border-radius:0;box-shadow:none;background:#071a32}
- .nav-submenu a{font-size:.9rem!important;padding:10px 8px!important}
- .service-category .category-layout{grid-template-columns:1fr}
-}
-@media(max-width:680px){.service-category{padding:40px 0}.service-photos{grid-template-columns:1fr}.service-photo img{height:220px}}
-
-/* Menús secundarios para Nosotros, Corporativo y Club HAL */
-.nav-dropdown.submenu-open>.nav-dropbtn{color:#43caff;border-color:#168eff}
-.nav-dropbtn span{font-size:.9em;opacity:.9}
-.nav-submenu a:hover{color:#43caff;background:#0a2442}
-@media(max-width:1100px){.nav-dropdown{border-bottom:1px solid #173655}.nav-dropdown .nav-submenu{padding-left:12px}.nav-dropdown .nav-submenu a{border-bottom:1px solid #173655!important}}
-</style></head>
-<body>
-<div class="brandbar"><div class="wrap brandrow"><a href="#inicio"><img class="brandlogo" src="logo-hal-garage.jpg" alt="Logo oficial HAL Garage"></a><div class="brandtext"><div class="brandname"><span class="hal">HAL</span> <span class="garage">GARAGE</span></div><div class="branddescriptor">CAR WASH · CAR DETAILING &amp; FLEET SOLUTIONS</div><div class="brandslogan">Calidad que se ve, cuidado que se siente.</div></div></div><div class="brandaccent"></div></div>
-<header class="navbar"><div class="wrap navrow"><button class="menu" id="menuBtn" aria-label="Abrir menú">☰ Menú</button><nav id="nav" class="navlinks" aria-label="Menú principal"><a href="#inicio">Inicio</a><div class="nav-dropdown"><button class="nav-dropbtn" aria-expanded="false" aria-controls="aboutSubmenu">Quiénes somos <span aria-hidden="true">▾</span></button><div class="nav-submenu" id="aboutSubmenu"><a href="#mision">Misión</a><a href="#vision">Visión</a><a href="#valores">Valores</a></div></div><div class="nav-dropdown"><button class="nav-dropbtn" id="servicesMenuBtn" aria-expanded="false" aria-controls="servicesSubmenu">Servicios <span aria-hidden="true">▾</span></button><div class="nav-submenu" id="servicesSubmenu"><a href="#cuidado-esencial">Cuidado esencial</a><a href="#correccion-proteccion">Corrección y protección</a><a href="#tratamiento-ceramico">Tratamiento cerámico</a><a href="#servicios-especiales">Servicios especiales</a><a href="#detailing-interior">Detailing interior</a></div></div><div class="nav-dropdown"><button class="nav-dropbtn" aria-expanded="false" aria-controls="corporateSubmenu">Corporativo <span aria-hidden="true">▾</span></button><div class="nav-submenu" id="corporateSubmenu"><a href="#convenios-empresariales">Convenios empresariales</a><a href="#flota-vehicular">Flota vehicular</a><a href="#planes-corporativos">Planes corporativos</a></div></div><a href="#reservas">Reservas</a><div class="nav-dropdown"><button class="nav-dropbtn" aria-expanded="false" aria-controls="clubSubmenu">Club HAL <span aria-hidden="true">▾</span></button><div class="nav-submenu" id="clubSubmenu"><a href="#club-registro">Registro</a><a href="#club-categorias">Categorías</a><a href="#club-beneficios">Beneficios</a></div></div><a href="#halito">Halito</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a><a class="nav-cta" href="#reservas">Reservar</a></nav></div></header>
-<main>
-<section class="hero" id="inicio"><div class="wrap hero-grid"><div><div class="eyebrow">Car Wash · Car Detailing · Fleet Solutions</div><h1>Calidad que se ve.<br><em>Cuidado que se siente.</em></h1><p>Lavado profesional, detailing y soluciones de cuidado automotriz para clientes particulares y empresas. Conoce nuestros servicios y encuentra la opción ideal para tu vehículo.</p><div class="actions"><a class="btn" href="#servicios">Ver servicios</a><a class="btn alt" href="#corporativo">Soluciones corporativas</a></div></div><div><img class="hero-logo" src="logo-hal-garage.jpg" alt="HAL Garage Car Wash, Car Detailing & Fleet Solutions"></div></div></section>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#06152b"><meta name="description" content="HAL Garage: lavado profesional, car detailing y soluciones para empresas y flotas."><title>Inicio | HAL Garage</title><style>
+:root{--bg:#06152b;--blue:#087ee8;--cyan:#35c7ff;--muted:#b3c3d7;--line:#244565;--white:#f8fbff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font:16px/1.6 Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+header{position:sticky;top:0;z-index:100;background:#041126f5;backdrop-filter:blur(12px);border-bottom:1px solid #244565}.topbar{min-height:90px;display:flex;align-items:center;gap:16px;padding:12px 0}.brand{display:flex;align-items:center;gap:13px;min-width:0}.brand img{width:78px;height:58px;object-fit:contain}.brand strong{display:block;font-size:1.45rem;line-height:1.05;letter-spacing:.03em}.brand strong span{color:#168eff}.brand small{display:block;color:#bfd4e9;font-size:.68rem;font-weight:800;letter-spacing:.1em;margin-top:5px}.menuBtn{margin-left:auto;background:#087ee8;color:#fff;border:0;border-radius:8px;padding:11px 14px;font-weight:800;font-size:.95rem;cursor:pointer;white-space:nowrap}.menuPanel{display:none;border-top:1px solid #244565;background:#06152b;max-height:calc(100vh - 90px);overflow:auto}.menuPanel.open{display:block}.menuGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding:18px 0 24px}.menuGroup{border:1px solid #244565;border-radius:10px;padding:12px;background:#081d36}.menuGroup>a,.menuGroup>button{display:block;width:100%;padding:7px 5px;text-align:left;background:none;border:0;color:#f8fbff;font:700 .95rem Arial;cursor:pointer}.menuGroup>a:hover,.menuGroup>button:hover,.submenu a:hover{color:#43caff}.menuGroup>button:after{content:'▾';float:right;color:#43caff}.submenu{display:none;padding:3px 0 0 12px}.menuGroup.expanded .submenu{display:block}.submenu a{display:block;padding:6px 4px;color:#b3c3d7;font-size:.9rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:8px;background:linear-gradient(110deg,#087be8,#22baff);font-weight:800;color:white;border:0;cursor:pointer}.btn.alt{background:transparent;border:1px solid #47749d}.eyebrow{font-size:.78rem;text-transform:uppercase;letter-spacing:.19em;color:var(--cyan);font-weight:800}.hero{padding:62px 0;background:radial-gradient(ellipse at 80% 10%,#0a4c88 0,transparent 42%),linear-gradient(120deg,#041126,#082344 60%,#041126)}.heroGrid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}.hero h1{font-size:clamp(2.4rem,5vw,4.6rem);line-height:1.03;letter-spacing:-.04em;margin:12px 0 18px}.hero h1 em{font-style:normal;color:var(--cyan)}.hero p,.intro{color:var(--muted);font-size:1.08rem}.heroLogo{width:100%;max-height:430px;object-fit:contain;border-radius:14px;border:1px solid #23517d;background:#06152b}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:23px}
+.stats{border-block:1px solid #1a3c60;background:#071a32}.statgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;text-align:center;padding:22px 0}.statgrid b{display:block}.statgrid span{color:var(--muted);font-size:.88rem}
+main section{padding:62px 0}.light{background:linear-gradient(120deg,#071a32,#0a2442)}.head{max-width:800px;margin-bottom:28px}.head h2,.content h2{font-size:clamp(1.9rem,3.5vw,2.8rem);line-height:1.1;margin:8px 0 12px}.head p,.muted{color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.card{background:linear-gradient(145deg,#0d2949,#081a31);border:1px solid var(--line);border-radius:13px;padding:22px;min-width:0}.card h3{margin:0 0 8px}.card p{color:var(--muted);margin:0}.symbol{font-size:1.5rem;color:var(--cyan);background:#087be826;border-radius:10px;width:45px;height:45px;display:grid;place-items:center;margin-bottom:14px}
+.featureGrid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}.featureImg{width:100%;max-height:600px;object-fit:contain;background:#06152b;border:1px solid var(--line);border-radius:12px}.serviceGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.serviceCard{border:1px solid var(--line);background:#0a213e;border-radius:12px;overflow:hidden}.serviceCard img{display:block;width:100%;height:250px;object-fit:cover;background:#06152b}.serviceCard div{padding:16px}.serviceCard p{color:var(--muted);margin:6px 0 0}.tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.tag{border:1px solid #2b5d87;border-radius:99px;padding:6px 11px;color:#c5ebff;font-size:.82rem}
+.formgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}.box{background:#0a213e;border:1px solid var(--line);border-radius:13px;padding:24px}.field{margin:12px 0}.field label{display:block;color:#c6d5e7;font-size:.9rem;margin-bottom:5px}.field input,.field select,.field textarea{width:100%;padding:12px;border-radius:7px;background:#06172c;border:1px solid #2b4d6e;color:white;font:inherit}.field textarea{min-height:100px}.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.gallery img{width:100%;height:240px;object-fit:contain;background:#06152b;border:1px solid var(--line);border-radius:10px}.clubbox{border:1px solid #2b5e88;border-radius:16px;padding:26px;background:radial-gradient(ellipse at 90% 5%,#0b4a7a,#071a31 60%)}footer{background:#030d1c;border-top:1px solid var(--line);padding:28px 0;color:#9fb3ca;font-size:.9rem}.footGrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:20px}.footGrid b{color:white;letter-spacing:.08em}.footLinks{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}.footLinks a{color:#b3c3d7}.footLinks a:hover{color:#43caff}.note{font-size:.82rem;color:#8da8c4;margin-top:14px}
+@media(max-width:850px){.menuGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.heroGrid,.featureGrid,.formgrid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.heroLogo{max-height:330px}.footGrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.topbar{min-height:75px;gap:8px}.brand img{width:57px;height:50px}.brand strong{font-size:1.12rem}.brand small{font-size:.52rem;letter-spacing:.05em}.menuBtn{padding:10px;font-size:.85rem}.menuGrid,.cards,.serviceGrid,.gallery,.statgrid,.footGrid{grid-template-columns:1fr}.hero{padding:42px 0}.hero h1{font-size:clamp(2.1rem,10vw,2.8rem)}main section{padding:42px 0}.serviceCard img{height:220px}.actions{flex-direction:column}.actions .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body>
+<header><div class="wrap topbar"><a class="brand" href="index.html" aria-label="HAL Garage Inicio"><img src="logo-hal-garage.jpg" alt="Logo HAL Garage"><span><strong>HAL <span>GARAGE</span></strong><small>CAR WASH · DETAILING · FLEET SOLUTIONS</small></span></a><button class="menuBtn" id="menuBtn" aria-expanded="false" aria-controls="menuPanel">☰ Menú</button></div><div class="menuPanel" id="menuPanel"><div class="wrap menuGrid">
+<div class="menuGroup"><a href="index.html">Inicio</a></div>
+<div class="menuGroup"><button type="button">Quiénes somos</button><div class="submenu"><a href="nosotros.html#mision">Misión</a><a href="nosotros.html#vision">Visión</a><a href="nosotros.html#valores">Valores</a></div></div>
+<div class="menuGroup"><button type="button">Servicios</button><div class="submenu"><a href="cuidado-esencial.html">Cuidado esencial</a><a href="correccion-proteccion.html">Corrección y protección</a><a href="tratamiento-ceramico.html">Tratamiento cerámico</a><a href="servicios-especiales.html">Servicios especiales</a><a href="detailing-interior.html">Detailing interior</a></div></div>
+<div class="menuGroup"><button type="button">Corporativo</button><div class="submenu"><a href="convenios-empresariales.html">Convenios empresariales</a><a href="flota-vehicular.html">Flota vehicular</a><a href="planes-corporativos.html">Planes corporativos</a></div></div>
+<div class="menuGroup"><a href="reservas.html">Reservas</a></div>
+<div class="menuGroup"><button type="button">Club HAL</button><div class="submenu"><a href="club-registro.html">Registro</a><a href="club-categorias.html">Categorías</a><a href="club-beneficios.html">Beneficios</a></div></div>
+<div class="menuGroup"><a href="halito.html">Halito</a></div><div class="menuGroup"><a href="galeria.html">Galería</a></div><div class="menuGroup"><a href="contacto.html">Contacto</a></div>
+</div></div></header><main>
+<section class="hero"><div class="wrap heroGrid"><div><div class="eyebrow">Bienvenido a HAL Garage</div><h1>HAL <em>GARAGE</em></h1><p class="intro">Somos un centro de lavado y cuidado automotriz comprometido con ofrecer una atención profesional, responsable y detallista. Trabajamos para que cada cliente reciba un servicio adecuado a las necesidades de su vehículo.</p><p>Calidad, confianza y atención al detalle en cada visita.</p><div class="actions"><a class="btn" href="cuidado-esencial.html">Conocer servicios</a><a class="btn alt" href="reservas.html">Reservar servicio</a></div></div><div><img class="heroLogo" src="logo-hal-garage.jpg" alt="Logo oficial de HAL Garage"></div></div></section>
 <div class="stats"><div class="wrap statgrid"><div><b>Cuidado profesional</b><span>Atención al detalle</span></div><div><b>HAL Garage Business</b><span>Soluciones para empresas y flotas</span></div><div><b>Club HAL</b><span>Beneficios para clientes frecuentes</span></div></div></div>
-<section id="nosotros"><div class="wrap"><div class="head"><div class="eyebrow">Nosotros</div><h2>Más que un lavado, una experiencia de cuidado automotriz.</h2><p>En HAL Garage cuidamos cada detalle del vehículo con una atención enfocada en la calidad, la confianza y una experiencia sencilla para nuestros clientes.</p></div><div class="cards"><article class="card" id="mision"><div class="symbol">◎</div><h3>Misión</h3><p>Brindar servicios de lavado y cuidado automotriz con atención al detalle, compromiso y una experiencia confiable para cada cliente.</p></article><article class="card" id="vision"><div class="symbol">↗</div><h3>Visión</h3><p>Ser una marca reconocida por la calidad de sus servicios, la confianza de sus clientes y sus soluciones para vehículos particulares y flotas.</p></article><article class="card" id="valores"><div class="symbol">✦</div><h3>Valores</h3><p>Responsabilidad, honestidad, calidad, respeto por cada vehículo y mejora continua en el servicio.</p></article></div></div></section>
-<section id="servicios" class="light-section"><div class="wrap"><div class="catalog-layout"><div><div class="eyebrow">Servicios y precios</div><div class="head"><h2>Todo nuestro catálogo, dentro de la web.</h2><p>Explora los servicios básicos, de protección, especiales y de detailing. Hemos incorporado la imagen del catálogo comercial para que los visitantes puedan revisarla directamente, sin descargar archivos.</p></div><div class="actions"><a class="btn" href="#reservas">Consultar o reservar</a></div><p class="note">La imagen del catálogo es una vista de referencia completa; en la siguiente iteración podemos separar cada servicio en fichas individuales para una lectura más cómoda en celular.</p></div><img class="catalog-image" src="catalogo-servicios-2026.png" alt="Catálogo de servicios HAL Garage 2026"></div></div></section>
-
-<section id="cuidado-esencial" class="service-category"><div class="wrap category-layout"><div><div class="eyebrow">Servicios HAL Garage</div><h2>Cuidado esencial</h2><p>La base para mantener tu vehículo limpio y presentable: lavado exterior, lavado completo y aspirado profesional.</p><a class="category-link" href="#reservas">Consultar o reservar →</a></div><div class="service-photos"><figure class="service-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=900&q=85" alt="Lavado exterior profesional de un vehículo"><figcaption>Lavado exterior profesional</figcaption></figure><figure class="service-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&w=900&q=85" alt="Limpieza y cuidado interior de automóvil"><figcaption>Lavado completo y aspirado</figcaption></figure></div></div></section>
-<section id="correccion-proteccion" class="service-category"><div class="wrap category-layout"><div><div class="eyebrow">Brillo y cuidado</div><h2>Corrección y protección</h2><p>Opciones para mejorar la apariencia de la pintura y ayudar a proteger el acabado de tu vehículo.</p><a class="category-link" href="#reservas">Consultar o reservar →</a></div><div class="service-photos"><figure class="service-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1613214150384-5e1a5b5a2d8a?auto=format&fit=crop&w=900&q=85" alt="Pulido profesional de la carrocería"><figcaption>Pulido y corrección de pintura</figcaption></figure><figure class="service-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1605164599901-4f7d5f9a6f8a?auto=format&fit=crop&w=900&q=85" alt="Acabado brillante de vehículo detallado"><figcaption>Encerado y protección</figcaption></figure></div></div></section>
-<section id="tratamiento-ceramico" class="service-category"><div class="wrap category-layout"><div><div class="eyebrow">Protección avanzada</div><h2>Tratamiento cerámico</h2><p>Tratamientos orientados a realzar el brillo y facilitar el mantenimiento de la superficie, según evaluación del vehículo.</p><a class="category-link" href="#reservas">Consultar o reservar →</a></div><div class="service-photos"><figure class="service-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1632823471565-1ecdf5c8a3c3?auto=format&fit=crop&w=900&q=85" alt="Vehículo con acabado brillante"><figcaption>Acabado y brillo de pintura</figcaption></figure><figure class="service-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1600705722908-bab3b4a8b8d6?auto=format&fit=crop&w=900&q=85" alt="Detalle de carrocería limpia y protegida"><figcaption>Cuidado de superficies</figcaption></figure></div></div></section>
-<section id="servicios-especiales" class="service-category"><div class="wrap category-layout"><div><div class="eyebrow">Atención especializada</div><h2>Servicios especiales</h2><p>Servicios adicionales para necesidades específicas. La disponibilidad y el alcance se confirman según el tipo y estado del vehículo.</p><a class="category-link" href="#reservas">Consultar o reservar →</a></div><div class="service-photos"><figure class="service-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=900&q=85" alt="Trabajo de mantenimiento y cuidado automotriz"><figcaption>Cuidado especializado</figcaption></figure><figure class="service-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=900&q=85" alt="Detalle de interior de automóvil"><figcaption>Detalles según evaluación</figcaption></figure></div></div></section>
-<section id="detailing-interior" class="service-category"><div class="wrap category-layout"><div><div class="eyebrow">Detailing</div><h2>Detailing interior</h2><p>Limpieza detallada de las superficies interiores para renovar la presentación y el confort del habitáculo.</p><a class="category-link" href="#reservas">Consultar o reservar →</a></div><div class="service-photos"><figure class="service-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1507136566006-cfc505b114fc?auto=format&fit=crop&w=900&q=85" alt="Interior de automóvil para detailing"><figcaption>Detallado de tablero y superficies</figcaption></figure><figure class="service-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1600705722908-bab3b4a8b8d6?auto=format&fit=crop&w=900&q=85" alt="Acabado limpio de un vehículo"><figcaption>Limpieza de detalles interiores</figcaption></figure></div></div></section>
-<section id="corporativo"><div class="wrap"><div class="head"><div class="eyebrow">HAL Garage Business</div><h2>Sección corporativa</h2><p>Una presentación pensada para empresas, negocios y organizaciones que buscan servicios de cuidado vehicular, convenios y soluciones para sus flotas.</p></div><div class="corp" id="convenios-empresariales"><div><h3>Convenios empresariales</h3><p class="muted">Propuestas de colaboración para empresas y negocios que buscan beneficios de cuidado vehicular para sus equipos o colaboradores.</p><div class="tagrow"><span class="tag">Convenios</span><span class="tag">Beneficios para colaboradores</span></div><a class="btn" href="#reservas">Consultar convenio</a></div><img src="catalogo-corporativo.png" alt="Catálogo corporativo HAL Garage"></div><div class="corp" id="flota-vehicular" style="margin-top:18px"><div><h3>Flota vehicular</h3><p class="muted">Opciones de atención coordinada para vehículos de empresa, con alcance y frecuencia por definir según las necesidades de cada flota.</p><div class="tagrow"><span class="tag">Autos y camionetas</span><span class="tag">Atención coordinada</span></div><a class="btn" href="#reservas">Solicitar evaluación de flota</a></div><img src="catalogo-corporativo.png" alt="Soluciones para flotas vehiculares"></div><div class="corp" id="planes-corporativos" style="margin-top:18px"><div><h3>Planes corporativos</h3><p class="muted">Presentamos alternativas y propuestas según volumen, tipo de vehículo y servicios requeridos. Los precios y condiciones se confirman de forma personalizada.</p><div class="tagrow"><span class="tag">Planes a medida</span><span class="tag">Propuestas comerciales</span></div><a class="btn" href="#reservas">Solicitar propuesta corporativa</a></div><img src="manual-corporativo-business.png" alt="Manual comercial de HAL Garage Business"></div><div class="corp" style="margin-top:18px"><div><h3>Soluciones para empresas y flotas</h3><p class="muted">En esta sección los visitantes pueden revisar directamente nuestro folleto corporativo y conocer los planes, servicios incluidos, beneficios empresariales y opciones de convenio.</p><div class="tagrow"><span class="tag">Convenios empresariales</span><span class="tag">Flotas vehiculares</span><span class="tag">Planes corporativos</span><span class="tag">Atención coordinada</span></div><a class="btn" href="#reservas">Solicitar propuesta corporativa</a></div><img src="catalogo-corporativo.png" alt="Catálogo corporativo HAL Garage con planes y beneficios empresariales"></div><div class="corp" style="margin-top:18px"><div><h3>Manual comercial de HAL Garage Business</h3><p class="muted">También incluimos el material corporativo adicional para que potenciales aliados puedan conocer mejor la propuesta de HAL Garage.</p></div><img src="manual-corporativo-business.png" alt="Manual corporativo HAL Garage Business"></div></div></section>
-<section id="reservas" class="light-section"><div class="wrap"><div class="head"><div class="eyebrow">Reservas</div><h2>Cuéntanos qué servicio necesitas.</h2><p>Completa el formulario y prepara tu consulta para enviarla por WhatsApp una vez configurado el número oficial.</p></div><div class="formgrid"><div class="box"><h3>Atención coordinada</h3><p>Indícanos el tipo de vehículo y el servicio que te interesa. Confirmaremos contigo la disponibilidad y los detalles.</p><p>✓ Autos y camionetas<br>✓ Paquetes de detailing<br>✓ Consultas de flotas y empresas</p><p class="note">Pendiente: conectar el número oficial de WhatsApp de HAL Garage.</p></div><form class="box" id="booking"><div class="field"><label for="nombre">Nombre</label><input id="nombre" required placeholder="Tu nombre"></div><div class="field"><label for="vehiculo">Tipo de vehículo</label><select id="vehiculo"><option>Auto</option><option>SUV / camioneta</option><option>Camioneta XL / pick-up</option><option>Flota empresarial</option></select></div><div class="field"><label for="servicio">Servicio</label><select id="servicio"><option>Lavado exterior</option><option>Lavado completo</option><option>Aspirado profesional</option><option>Encerado premium</option><option>Servicios especiales</option><option>Detailing Premium</option><option>Detailing VIP</option><option>Detailing Exclusivo</option><option>Consulta corporativa</option></select></div><div class="field"><label for="fecha">Fecha preferida</label><input id="fecha" type="date"></div><div class="field"><label for="mensaje">Comentario</label><textarea id="mensaje" placeholder="Cuéntanos algo más (opcional)"></textarea></div><button class="btn" type="submit">Preparar consulta</button></form></div></div></section>
-<section id="club"><div class="wrap"><div class="clubbox"><div><div class="eyebrow">Fidelización</div><h2>Club HAL</h2><p class="muted">Un espacio para clientes frecuentes, con registro, categorías, beneficios, promociones y recompensas.</p><div class="tagrow"><span class="tag">Beneficios exclusivos</span><span class="tag">Promociones</span><span class="tag">Recompensas</span></div></div><a class="btn" href="#club-registro">Conocer el Club HAL</a></div><div class="cards" style="margin-top:20px"><article class="card" id="club-registro"><div class="symbol">＋</div><h3>Registro</h3><p>Próximamente podrás registrarte para acceder a los beneficios del Club HAL. El registro se conectará cuando esté listo el sistema oficial, sin duplicar ni modificar el sistema interno de gestión.</p><a class="category-link" href="#contacto">Solicitar información →</a></article><article class="card" id="club-categorias"><div class="symbol">★</div><h3>Categorías</h3><p>El club contempla las categorías Bronce, Plata, Oro y VIP. La asignación y los avances se gestionarán según las reglas oficiales del programa.</p><div class="tagrow"><span class="tag">Bronce</span><span class="tag">Plata</span><span class="tag">Oro</span><span class="tag">VIP</span></div></article><article class="card" id="club-beneficios"><div class="symbol">✦</div><h3>Beneficios</h3><p>Beneficios para clientes frecuentes, promociones y recompensas por visitas. Los beneficios concretos se mostrarán según la categoría y las campañas activas.</p><div class="tagrow"><span class="tag">Promociones</span><span class="tag">Recompensas</span></div></article></div></div></section>
-<section id="halito" class="light-section"><div class="wrap halito"><div><img class="halito-img" src="halito-mascota.png" alt="Halito, mascota y asesor de confianza de HAL Garage"></div><div><div class="eyebrow">Te acompaña Halito</div><h2>¡Hola, soy Halito!</h2><p class="intro">Soy el asesor y amigo de confianza de HAL Garage. Estoy aquí para compartir consejos de cuidado automotriz y ayudarte a elegir el servicio ideal para mantener tu vehículo impecable.</p><div class="card"><h3>Consejo de Halito</h3><p>Un lavado regular ayuda a retirar polvo y suciedad antes de que se acumulen. Para cuidar la pintura, utiliza productos adecuados y evita limpiar la carrocería en seco.</p></div><p class="note">Halito también podrá aparecer en los consejos, la galería y las publicaciones de HAL Garage.</p></div></div></section>
-<section id="galeria"><div class="wrap"><div class="head"><div class="eyebrow">Galería</div><h2>El cuidado se nota en cada detalle.</h2><p>Incluimos una vista de los materiales visuales existentes mientras preparamos una galería con fotografías reales de trabajos realizados.</p></div><div class="gallery"><div><img src="catalogo-servicios-2026.png" alt="Vista del catálogo de servicios"><div class="cap">Servicios y detailing</div></div><div><img src="catalogo-corporativo.png" alt="Vista del folleto corporativo"><div class="cap">Soluciones corporativas</div></div><div><img src="manual-corporativo-business.png" alt="Vista del manual corporativo"><div class="cap">HAL Garage Business</div></div></div><p class="note">Estos son materiales de marca, no fotografías de antes y después. Sustituiremos o complementaremos esta galería con imágenes reales de los vehículos atendidos.</p></div></section>
-<section id="contacto" class="light-section"><div class="wrap"><div class="head"><div class="eyebrow">Contáctanos</div><h2>Hablemos del cuidado de tu vehículo.</h2><p>Para consultas de precios, reservas, Club HAL o propuestas corporativas.</p></div><div class="cards"><article class="card"><div class="symbol">☏</div><h3>WhatsApp</h3><p>El número oficial se configurará antes de publicar la web.</p></article><article class="card"><div class="symbol">⌖</div><h3>Ubicación</h3><p>Añadiremos el mapa y la ubicación que HAL Garage autorice publicar.</p></article><article class="card"><div class="symbol">◎</div><h3>Redes sociales</h3><p>Conectaremos los perfiles oficiales de Facebook e Instagram.</p></article></div></div></section>
-</main><footer><div class="wrap foot"><div><b>HAL GARAGE</b><div>Car Wash · Car Detailing & Fleet Solutions</div></div><div>Calidad que se ve, cuidado que se siente.</div><div>© <span id="year"></span> HAL Garage</div></div></footer>
+<section><div class="wrap"><div class="head"><div class="eyebrow">Explora HAL Garage</div><h2>Todo lo que necesitas, en su propia página.</h2><p>Entra a cada área para conocer nuestros servicios, las soluciones corporativas, el Club HAL y las opciones de reserva.</p></div><div class="cards"><article class="card"><div class="symbol">✦</div><h3>Servicios</h3><p>Desde el cuidado esencial hasta el detailing interior y los tratamientos especializados.</p><p><a href="cuidado-esencial.html">Ver servicios →</a></p></article><article class="card"><div class="symbol">▦</div><h3>Soluciones corporativas</h3><p>Convenios empresariales, flotas vehiculares y planes corporativos.</p><p><a href="convenios-empresariales.html">Conocer opciones →</a></p></article><article class="card"><div class="symbol">★</div><h3>Club HAL</h3><p>Un espacio para clientes frecuentes, categorías y beneficios.</p><p><a href="club-beneficios.html">Descubrir beneficios →</a></p></article></div></div></section></main>
+<footer><div class="wrap footGrid"><div><b>HAL GARAGE</b><p>Car Wash · Car Detailing &amp; Fleet Solutions</p><p>Calidad que se ve, cuidado que se siente.</p></div><div><b>Contacto</b><p>Teléfono: pendiente de configurar<br>Ubicación: pendiente de confirmar</p><div class="footLinks"><a href="contacto.html">Ver contacto</a><a href="reservas.html">Reservas</a></div></div><div><b>Síguenos</b><p>Conectaremos aquí las redes sociales oficiales de HAL Garage.</p><div class="footLinks"><a href="galeria.html">Galería</a><a href="club-beneficios.html">Club HAL</a></div></div></div><div class="wrap note">© <span id="year"></span> HAL Garage. Todos los derechos reservados.</div></footer>
 <script>
-const nav=document.getElementById('nav');
-const menuBtn=document.getElementById('menuBtn');
-if(nav && menuBtn){
-  menuBtn.setAttribute('aria-controls','nav');
-  menuBtn.setAttribute('aria-expanded','false');
-  const closeMenu=()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.setAttribute('aria-label','Abrir menú');};
-  menuBtn.addEventListener('click',()=>{
-    const isOpen=nav.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded',String(isOpen));
-    menuBtn.setAttribute('aria-label',isOpen?'Cerrar menú':'Abrir menú');
-  });
-  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
-  document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!menuBtn.contains(e.target))closeMenu();});
-}
-
-const dropdowns=[...document.querySelectorAll('.nav-dropdown')];
-dropdowns.forEach(dropdown=>{
-  const button=dropdown.querySelector('.nav-dropbtn');
-  const submenu=dropdown.querySelector('.nav-submenu');
-  if(!button || !submenu)return;
-  button.addEventListener('click',()=>{
-    const shouldOpen=!dropdown.classList.contains('submenu-open');
-    dropdowns.forEach(other=>{
-      other.classList.remove('submenu-open');
-      const otherButton=other.querySelector('.nav-dropbtn');
-      if(otherButton)otherButton.setAttribute('aria-expanded','false');
-    });
-    if(shouldOpen){
-      dropdown.classList.add('submenu-open');
-      button.setAttribute('aria-expanded','true');
-    }
-  });
-  submenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-    dropdown.classList.remove('submenu-open');
-    button.setAttribute('aria-expanded','false');
-    if(nav && menuBtn){nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}
-  }));
-});
-document.addEventListener('click',e=>{
-  if(!e.target.closest('.nav-dropdown')){
-    dropdowns.forEach(dropdown=>{
-      dropdown.classList.remove('submenu-open');
-      const button=dropdown.querySelector('.nav-dropbtn');
-      if(button)button.setAttribute('aria-expanded','false');
-    });
-  }
-});
-document.addEventListener('keydown',e=>{
-  if(e.key==='Escape')dropdowns.forEach(dropdown=>{
-    dropdown.classList.remove('submenu-open');
-    const button=dropdown.querySelector('.nav-dropbtn');
-    if(button)button.setAttribute('aria-expanded','false');
-  });
-});
-
-document.querySelectorAll('img').forEach(img=>{
-  img.addEventListener('error',function(){
-    if(this.dataset.fallbackTried)return;
-    this.dataset.fallbackTried='1';
-    const file=(this.getAttribute('src')||'').split('/').pop();
-    if(file)this.src='https://raw.githubusercontent.com/HAL-Garege/HAL-Garage-Web/main/'+encodeURIComponent(file);
-  });
-});
+const menuBtn=document.getElementById('menuBtn'),menuPanel=document.getElementById('menuPanel');
+menuBtn.addEventListener('click',()=>{const open=menuPanel.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+document.querySelectorAll('.menuGroup>button').forEach(b=>b.addEventListener('click',()=>b.parentElement.classList.toggle('expanded')));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){menuPanel.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');document.querySelectorAll('.menuGroup.expanded').forEach(g=>g.classList.remove('expanded'));}});
 const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
-const booking=document.getElementById('booking');
-if(booking)booking.addEventListener('submit',e=>{e.preventDefault();alert('Formulario de prueba listo. Para activar el envío real, falta configurar el WhatsApp oficial de HAL Garage.');});
+document.querySelectorAll('img').forEach(img=>img.addEventListener('error',function(){if(this.dataset.fallbackTried)return;this.dataset.fallbackTried='1';const f=(this.getAttribute('src')||'').split('/').pop();if(f && !this.src.includes('raw.githubusercontent.com'))this.src='https://raw.githubusercontent.com/HAL-Garege/HAL-Garage-Web/main/'+f;}));
 </script></body></html>
