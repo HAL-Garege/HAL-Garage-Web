@@ -16,6 +16,44 @@ section{padding:70px 0}.head{max-width:760px;margin-bottom:30px}.head.center{tex
 
 /* Header brand lockup v3 */
 .brandbar{background:linear-gradient(110deg,#030d1c,#071d39);border-bottom:1px solid #17395e}.brandrow{min-height:126px;display:flex;align-items:center;gap:22px;padding:16px 0}.brandlogo{width:210px;max-height:96px;object-fit:contain;border-radius:4px;display:block}.brandtext{border-left:1px solid #285078;padding-left:22px}.brandname{font-size:clamp(2rem,4vw,3.3rem);font-weight:950;line-height:.98;letter-spacing:.04em}.brandname .hal{color:#f4f7fb}.brandname .garage{color:#168eff}.branddescriptor{font-size:clamp(.72rem,1.3vw,.95rem);font-weight:800;letter-spacing:.16em;color:#e8eef7;margin-top:8px;text-transform:uppercase}.brandslogan{font-size:.91rem;color:#a9c8e7;margin-top:7px}.brandaccent{height:3px;background:linear-gradient(90deg,#031026,#087ee8,#38d0ff,#06152b)}.navbar{background:#071a32;border-bottom:1px solid #244b70;position:sticky;top:0;z-index:50;box-shadow:0 8px 22px #0002}.navrow{display:flex;align-items:center;min-height:54px}.navlinks{display:flex;align-items:center;justify-content:space-between;gap:13px;width:100%;font-size:.82rem;font-weight:700;color:#e1ebf7}.navlinks a{padding:16px 0;border-bottom:2px solid transparent;white-space:nowrap}.navlinks a:hover{color:#43caff;border-color:#168eff}.navlinks .nav-cta{background:#087ee8;padding:8px 13px;border:0;border-radius:7px}.menu{display:none;background:transparent;color:white;border:1px solid #315577;border-radius:7px;padding:8px 12px}@media(max-width:950px){.brandlogo{width:165px}.navlinks{gap:8px;font-size:.74rem}}@media(max-width:680px){.brandrow{min-height:95px;gap:12px}.brandlogo{width:100px}.brandtext{padding-left:12px}.brandname{font-size:1.7rem}.branddescriptor{font-size:.55rem;letter-spacing:.08em}.brandslogan{font-size:.72rem}.navrow{min-height:50px}.menu{display:block}.navlinks{display:none;position:absolute;top:50px;left:0;right:0;background:#06152b;padding:13px 5%;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid #244665}.navlinks.open{display:flex}.navlinks a{padding:10px 0}.navlinks .nav-cta{text-align:center;margin-top:6px}}
+
+/* Responsive cleanup: consistent navigation, spacing and image fallback support */
+img{max-width:100%;height:auto}
+.hero-grid,.catalog-layout,.corp,.halito,.formgrid{min-width:0}
+.card,.box,.corp,.clubbox{min-width:0}
+.catalog-image,.corp img,.gallery img,.hero-logo{object-fit:contain}
+@media(max-width:1100px){
+  .navrow{position:relative;justify-content:flex-start}
+  .menu{display:block}
+  .navlinks{display:none;position:absolute;top:50px;left:0;right:0;width:100%;background:#06152b;padding:12px 5%;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;border:1px solid #244665;border-top:0;box-shadow:0 12px 24px #0005;z-index:60}
+  .navlinks.open{display:flex}
+  .navlinks a{white-space:normal;padding:11px 0;font-size:.95rem;border-bottom:1px solid #173655}
+  .navlinks .nav-cta{text-align:center;margin-top:8px}
+}
+@media(min-width:1101px){
+  .menu{display:none!important}
+  .navlinks{display:flex!important;position:static;width:100%;padding:0;border:0;box-shadow:none;flex-direction:row;align-items:center}
+}
+@media(max-width:680px){
+  .brandrow{align-items:center}
+  .brandlogo{width:86px}
+  .brandtext{min-width:0}
+  .brandname{font-size:clamp(1.35rem,6vw,1.7rem)}
+  .branddescriptor{line-height:1.35}
+  .brandslogan{line-height:1.3}
+  .hero-grid{gap:24px}
+  .hero-logo{max-height:300px;object-fit:contain}
+  .catalog-layout{gap:20px}
+  .catalog-image{max-height:72vh;object-fit:contain}
+  .corp{gap:18px}
+  .corp img{max-height:62vh;object-fit:contain}
+  .halito-img{max-width:230px}
+  .gallery img{max-height:360px;object-fit:contain}
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .statgrid{gap:10px}
+}
+
 </style></head>
 <body>
 <div class="brandbar"><div class="wrap brandrow"><a href="#inicio"><img class="brandlogo" src="logo-hal-garage.jpg" alt="Logo oficial HAL Garage"></a><div class="brandtext"><div class="brandname"><span class="hal">HAL</span> <span class="garage">GARAGE</span></div><div class="branddescriptor">CAR WASH · CAR DETAILING &amp; FLEET SOLUTIONS</div><div class="brandslogan">Calidad que se ve, cuidado que se siente.</div></div></div><div class="brandaccent"></div></div>
@@ -33,6 +71,30 @@ section{padding:70px 0}.head{max-width:760px;margin-bottom:30px}.head.center{tex
 <section id="contacto" class="light-section"><div class="wrap"><div class="head"><div class="eyebrow">Contáctanos</div><h2>Hablemos del cuidado de tu vehículo.</h2><p>Para consultas de precios, reservas, Club HAL o propuestas corporativas.</p></div><div class="cards"><article class="card"><div class="symbol">☏</div><h3>WhatsApp</h3><p>El número oficial se configurará antes de publicar la web.</p></article><article class="card"><div class="symbol">⌖</div><h3>Ubicación</h3><p>Añadiremos el mapa y la ubicación que HAL Garage autorice publicar.</p></article><article class="card"><div class="symbol">◎</div><h3>Redes sociales</h3><p>Conectaremos los perfiles oficiales de Facebook e Instagram.</p></article></div></div></section>
 </main><footer><div class="wrap foot"><div><b>HAL GARAGE</b><div>Car Wash · Car Detailing & Fleet Solutions</div></div><div>Calidad que se ve, cuidado que se siente.</div><div>© <span id="year"></span> HAL Garage</div></div></footer>
 <script>
-const nav=document.getElementById('nav');document.getElementById('menuBtn').addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();
-document.getElementById('booking').addEventListener('submit',e=>{e.preventDefault();alert('Formulario de prueba listo. Para activar el envío real, falta configurar el WhatsApp oficial de HAL Garage.');});
+const nav=document.getElementById('nav');
+const menuBtn=document.getElementById('menuBtn');
+if(nav && menuBtn){
+  menuBtn.setAttribute('aria-controls','nav');
+  menuBtn.setAttribute('aria-expanded','false');
+  const closeMenu=()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.setAttribute('aria-label','Abrir menú');};
+  menuBtn.addEventListener('click',()=>{
+    const isOpen=nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded',String(isOpen));
+    menuBtn.setAttribute('aria-label',isOpen?'Cerrar menú':'Abrir menú');
+  });
+  nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+  document.addEventListener('click',e=>{if(!nav.contains(e.target)&&!menuBtn.contains(e.target))closeMenu();});
+}
+document.querySelectorAll('img').forEach(img=>{
+  img.addEventListener('error',function(){
+    if(this.dataset.fallbackTried)return;
+    this.dataset.fallbackTried='1';
+    const file=(this.getAttribute('src')||'').split('/').pop();
+    if(file)this.src='https://raw.githubusercontent.com/HAL-Garege/HAL-Garage-Web/main/'+encodeURIComponent(file);
+  });
+});
+const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
+const booking=document.getElementById('booking');
+if(booking)booking.addEventListener('submit',e=>{e.preventDefault();alert('Formulario de prueba listo. Para activar el envío real, falta configurar el WhatsApp oficial de HAL Garage.');});
 </script></body></html>
