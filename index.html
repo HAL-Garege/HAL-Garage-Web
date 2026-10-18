@@ -54,6 +54,55 @@ img{max-width:100%;height:auto}
   .statgrid{gap:10px}
 }
 
+
+/* Ajustes finales de navegación y presentación */
+:root{scroll-padding-top:115px}
+.brandbar{position:relative}
+.navbar{top:0}
+.navrow{position:relative;gap:12px}
+.menu{font:700 .95rem Arial,Helvetica,sans-serif;cursor:pointer;min-height:42px;align-items:center;justify-content:center;gap:8px;touch-action:manipulation}
+.menu:focus-visible,.navlinks a:focus-visible,.btn:focus-visible{outline:3px solid #43caff;outline-offset:3px}
+.navlinks{min-width:0}
+.hero-grid>div,.catalog-layout>div,.corp>div,.halito>div,.formgrid>div,.formgrid>form{min-width:0}
+section{scroll-margin-top:112px}
+.gallery>div{min-width:0;background:#081d36;border:1px solid var(--line);border-radius:12px;padding:10px}
+.gallery img{display:block;width:100%;height:clamp(190px,26vw,330px);object-fit:contain;background:#06152b}
+.catalog-image{background:#06152b;max-height:780px;object-fit:contain}
+.corp img{display:block;max-height:640px;object-fit:contain;background:#06152b}
+.hero-logo{display:block;max-height:520px;object-fit:contain;background:#06152b}
+@media(max-width:1100px){
+  .navrow{min-height:56px;justify-content:flex-start}
+  .menu{display:inline-flex!important;position:relative;z-index:62}
+  .navlinks{display:none!important;position:absolute!important;top:100%;left:0;right:0;width:100%;max-height:calc(100dvh - 150px);overflow-y:auto;background:#041126;padding:12px 5%;flex-direction:column!important;align-items:stretch!important;justify-content:flex-start!important;gap:0!important;border:1px solid #244665;border-top:0;border-radius:0 0 12px 12px;box-shadow:0 14px 28px #0008;z-index:61}
+  .navlinks.open{display:flex!important}
+  .navlinks a{display:block;white-space:normal;padding:12px 0;font-size:.95rem;border-bottom:1px solid #173655}
+  .navlinks .nav-cta{text-align:center;margin-top:8px;border:0}
+}
+@media(min-width:1101px){
+  .menu{display:none!important}
+  .navlinks{display:flex!important;position:static!important;max-height:none;overflow:visible;padding:0;border:0;box-shadow:none;flex-direction:row!important;align-items:center!important;justify-content:space-between!important}
+}
+@media(max-width:680px){
+  .brandrow{padding:12px 0;gap:10px}
+  .brandlogo{width:78px}
+  .brandtext{padding-left:10px}
+  .brandname{font-size:clamp(1.25rem,5.7vw,1.65rem);letter-spacing:.01em}
+  .branddescriptor{font-size:.52rem;letter-spacing:.045em}
+  .brandslogan{font-size:.69rem}
+  .hero{padding:38px 0}
+  .hero h1{font-size:clamp(2.15rem,10vw,2.7rem)}
+  section{padding:44px 0}
+  .cards,.gallery,.statgrid{grid-template-columns:1fr}
+  .catalog-image{max-height:none}
+  .corp img{max-height:none}
+  .gallery img{height:260px}
+  .hero-logo{max-height:320px}
+  .actions{flex-direction:column}
+  .actions .btn{width:100%}
+  .clubbox{padding:22px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
 </style></head>
 <body>
 <div class="brandbar"><div class="wrap brandrow"><a href="#inicio"><img class="brandlogo" src="logo-hal-garage.jpg" alt="Logo oficial HAL Garage"></a><div class="brandtext"><div class="brandname"><span class="hal">HAL</span> <span class="garage">GARAGE</span></div><div class="branddescriptor">CAR WASH · CAR DETAILING &amp; FLEET SOLUTIONS</div><div class="brandslogan">Calidad que se ve, cuidado que se siente.</div></div></div><div class="brandaccent"></div></div>
