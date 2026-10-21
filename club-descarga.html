@@ -3,17 +3,15 @@
 <style>
 :root{--bg:#06152b;--cyan:#35c7ff;--muted:#b3c3d7;--line:#244565;--white:#f8fbff}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0,#0a4c88 0,transparent 45%),var(--bg);color:var(--white);font:16px/1.6 Arial,Helvetica,sans-serif}.wrap{width:min(850px,92%);margin:auto}.panel{margin:9vh auto;padding:clamp(24px,5vw,46px);border:1px solid var(--line);border-radius:18px;background:#081d36;box-shadow:0 20px 60px #0003}.eyebrow{font-size:.78rem;letter-spacing:.17em;text-transform:uppercase;color:var(--cyan);font-weight:800}h1{font-size:clamp(2rem,6vw,3.4rem);line-height:1.05;margin:12px 0}.muted{color:var(--muted)}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:8px;background:linear-gradient(110deg,#087be8,#22baff);font-weight:800;color:white;text-decoration:none;border:0}.btn[aria-disabled=true]{opacity:.55;cursor:not-allowed}.note{border:1px solid #244565;border-radius:10px;padding:14px;margin-top:22px;color:var(--muted);font-size:.9rem}.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.links a.secondary{border:1px solid #47749d;background:transparent}.status{margin-top:12px;color:var(--muted);font-size:.9rem}
-</style></head><body><main class="wrap"><section class="panel"><div class="eyebrow">Club HAL Garage</div><h1>Tu Club, siempre contigo.</h1><p class="muted">Desde la aplicación puedes consultar tu categoría, revisar tus puntos, ver recompensas, explorar productos para canjear y conocer los beneficios que estén activos para tu membresía.</p><p class="muted">Estamos preparando el acceso directo a la descarga oficial. En cuanto se confirme el enlace público de la aplicación, se activará aquí.</p><div class="links"><a class="btn" id="downloadBtn" href="#" aria-disabled="true">Enlace de descarga pendiente</a><a class="btn secondary" href="./club-halito.html">Volver al Club HAL Garage</a></div><div class="status" id="downloadStatus">El enlace oficial todavía no está configurado.</div><div class="note"><b>Configuración del enlace:</b> cuando tengas la URL oficial de descarga o instalación, colócala en la constante <code>APP_DOWNLOAD_URL</code> al final de este archivo. El botón se activará automáticamente si se proporciona una dirección válida.</div></section></main><script>
+</style></head><body><main class="wrap"><section class="panel"><div class="eyebrow">Club HAL Garage</div><h1>Tu Club, siempre contigo.</h1><p class="muted">Desde la aplicación puedes consultar tu categoría, revisar tus puntos, ver recompensas, explorar productos para canjear y conocer los beneficios que estén activos para tu membresía.</p><div class="links"><a class="btn" id="downloadBtn" href="#" aria-disabled="true">Enlace de descarga pendiente</a><a class="btn secondary" href="./club-halito.html">Volver al Club HAL Garage</a></div></section></main><script>
 const APP_DOWNLOAD_URL = "https://hal-garege.github.io/HAL-Garage/club-hal-garage/";
 const button = document.getElementById("downloadBtn");
-const status = document.getElementById("downloadStatus");
 if (/^https:\/\//i.test(APP_DOWNLOAD_URL)) {
   button.href = APP_DOWNLOAD_URL;
   button.target = "_blank";
   button.rel = "noopener";
   button.removeAttribute("aria-disabled");
   button.textContent = "Descargar aplicación";
-  status.textContent = "Enlace de descarga configurado.";
 } else {
   button.addEventListener("click", event => event.preventDefault());
 }
