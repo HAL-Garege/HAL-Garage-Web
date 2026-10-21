@@ -15,8 +15,61 @@ main section{padding:62px 0}.light{background:linear-gradient(120deg,#071a32,#0a
 <div class="menuGroup"><a href="index.html">Inicio</a></div><div class="menuGroup"><a href="nosotros.html">Quiénes somos</a></div><div class="menuGroup"><a href="servicios.html">Servicios</a></div><div class="menuGroup"><a href="corporativo.html">Corporativo</a></div><div class="menuGroup"><a href="reservas.html">Reservas</a></div><div class="menuGroup"><a href="club-halito.html">Club HAL Garage</a></div><div class="menuGroup"><a href="halito.html">Halito</a></div><div class="menuGroup"><a href="galeria.html">Galería</a></div><div class="menuGroup"><a href="contacto.html">Contacto</a></div>
 </div></div></header><main>
 <section class="hero"><div class="wrap"><div class="eyebrow">Reservas</div><h1>Cuéntanos qué servicio <em>necesitas.</em></h1><p class="intro">Indícanos el tipo de vehículo y el servicio que te interesa. Confirmaremos contigo la disponibilidad y los detalles.</p></div></section>
-<section><div class="wrap formgrid"><div class="box"><h2>Atención coordinada</h2><p class="muted">Autos y camionetas · Paquetes de detailing · Consultas de flotas y empresas.</p><p class="note">El envío real se activará cuando se configure el número oficial de WhatsApp de HAL Garage.</p></div><form class="box" id="booking"><div class="field"><label for="nombre">Nombre</label><input id="nombre" required placeholder="Tu nombre"></div><div class="field"><label for="telefono">Teléfono</label><input id="telefono" type="tel" placeholder="Tu número de contacto"></div><div class="field"><label for="vehiculo">Tipo de vehículo</label><select id="vehiculo"><option>Auto</option><option>SUV / camioneta</option><option>Camioneta XL / pick-up</option><option>Flota empresarial</option></select></div><div class="field"><label for="servicio">Servicio</label><select id="servicio"><option>Cuidado esencial</option><option>Corrección y protección</option><option>Tratamiento cerámico</option><option>Servicios especiales</option><option>Detailing interior</option><option>Consulta corporativa</option></select></div><div class="field"><label for="fecha">Fecha preferida</label><input id="fecha" type="date"></div><div class="field"><label for="mensaje">Comentario</label><textarea id="mensaje" placeholder="Cuéntanos algo más (opcional)"></textarea></div><button class="btn" type="submit">Preparar consulta</button></form></div></section>
-<script>document.getElementById('booking').addEventListener('submit',e=>{e.preventDefault();alert('Formulario de demostración. Para enviar la solicitud, falta configurar el WhatsApp oficial de HAL Garage.');});</script></main>
+<section><div class="wrap formgrid"><div class="box"><h2>Atención coordinada</h2><p class="muted">Autos y camionetas · Paquetes de detailing · Consultas de flotas y empresas.</p><p class="note">Atención por WhatsApp: 904 881 370. Tu solicitud se preparará con los datos que completes y podrás confirmar el envío desde WhatsApp.</p></div><form class="box" id="booking">
+<div class="field"><label for="nombre">Nombre completo</label><input id="nombre" name="nombre" required autocomplete="name" placeholder="Tu nombre"></div>
+<div class="field"><label for="telefono">Teléfono de contacto</label><input id="telefono" name="telefono" type="tel" required autocomplete="tel" placeholder="Tu número de contacto"></div>
+<div class="field"><label for="vehiculo">Tipo de vehículo</label><select id="vehiculo" name="vehiculo" required><option value="">Selecciona tu vehículo</option><option>Auto</option><option>SUV / camioneta</option><option>Camioneta XL / pick-up</option><option>Flota empresarial</option></select></div>
+<div class="field"><label for="servicio">Categoría de servicio</label><select id="servicio" name="servicio" required><option value="">Selecciona una categoría</option><option value="Cuidado esencial">Cuidado esencial</option><option value="Corrección y protección">Corrección y protección</option><option value="Tratamiento cerámico">Tratamiento cerámico</option><option value="Servicios especiales">Servicios especiales</option><option value="Detailing interior">Detailing interior</option><option value="Consulta corporativa">Consulta corporativa</option></select></div>
+<div class="field" id="detalleServicioField" hidden><label for="detalleServicio">Tipo de servicio específico</label><select id="detalleServicio" name="detalleServicio" required disabled><option value="">Primero selecciona una categoría</option></select></div>
+<div class="field"><label for="fecha">Fecha preferida</label><input id="fecha" name="fecha" type="date" required></div>
+<div class="field"><label for="hora">Hora aproximada</label><select id="hora" name="hora" required><option value="">Selecciona una hora aproximada</option><option>8:00 a. m.</option><option>9:00 a. m.</option><option>10:00 a. m.</option><option>11:00 a. m.</option><option>12:00 p. m.</option><option>1:00 p. m.</option><option>2:00 p. m.</option><option>3:00 p. m.</option><option>4:00 p. m.</option><option>5:00 p. m.</option><option>6:00 p. m.</option></select></div>
+<div class="field"><label for="mensaje">Comentario (opcional)</label><textarea id="mensaje" name="mensaje" placeholder="Cuéntanos algo más sobre tu vehículo o lo que necesitas"></textarea></div>
+<p class="note">Al pulsar el botón se abrirá WhatsApp con tu solicitud preparada. Revisa el mensaje y pulsa enviar para completar la reserva.</p>
+<button class="btn" type="submit">Enviar solicitud por WhatsApp</button></form></div></section>
+<script>
+const bookingForm=document.getElementById('booking');
+const serviceSelect=document.getElementById('servicio');
+const detailField=document.getElementById('detalleServicioField');
+const detailSelect=document.getElementById('detalleServicio');
+const serviceOptions={
+"Cuidado esencial":["Lavado Express","Lavado exterior","Lavado completo","Limpieza del interior"],
+"Corrección y protección":["Encerado básico","Encerado premium","Descontaminado de pintura","Pulido premium","Pulido de vidrios","Pulido de faros"],
+"Tratamiento cerámico":["Ceramizado Express","Ceramizado Premium","Ceramizado de plásticos","Ceramizado de vidrios","Ceramizado de tapicería (tela)","Ceramizado de tapicería (cuero)"],
+"Servicios especiales":["Limpieza de motor","Lavado de chasis","Desinfección y sanitización","Eliminación de olores","Restauración de faros","Restauración de plásticos"],
+"Detailing interior":["Detailing interior Premium","Detailing interior Pro","Detailing interior Elite","Tratamiento de cuero","Tratamiento de plásticos","Lavado de asientos","Lavado de techo","Lavado de alfombra"],
+"Consulta corporativa":["Convenio empresarial","Servicio para flota vehicular","Plan corporativo","Otra consulta comercial"]
+};
+serviceSelect.addEventListener('change',()=>{
+ const options=serviceOptions[serviceSelect.value]||[];
+ detailSelect.innerHTML='<option value="">Selecciona el servicio específico</option>';
+ options.forEach(name=>{const option=document.createElement('option');option.value=name;option.textContent=name;detailSelect.appendChild(option);});
+ detailField.hidden=options.length===0;
+ detailSelect.disabled=options.length===0;
+ detailSelect.required=options.length>0;
+ if(options.length===0)detailSelect.value='';
+});
+const dateInput=document.getElementById('fecha');
+const localToday=new Date();
+dateInput.min=new Date(localToday.getTime()-localToday.getTimezoneOffset()*60000).toISOString().slice(0,10);
+bookingForm.addEventListener('submit',e=>{
+ e.preventDefault();
+ if(!bookingForm.reportValidity())return;
+ const value=id=>document.getElementById(id).value.trim();
+ const message=[
+ 'Hola HAL Garage, quisiera solicitar una reserva de servicio.',
+ 'Nombre: '+value('nombre'),
+ 'Teléfono: '+value('telefono'),
+ 'Tipo de vehículo: '+value('vehiculo'),
+ 'Categoría: '+value('servicio'),
+ 'Servicio específico: '+value('detalleServicio'),
+ 'Fecha preferida: '+value('fecha'),
+ 'Hora aproximada: '+value('hora'),
+ 'Comentario: '+(value('mensaje')||'Sin comentario')
+ ].join('\n');
+ const url='https://wa.me/51904881370?text='+encodeURIComponent(message);
+ window.open(url,'_blank');
+});
+</script></main>
 <footer><div class="wrap footGrid"><div><b>HAL GARAGE</b><p>Car Wash · Car Detailing &amp; Fleet Solutions</p><p>Calidad que se ve, cuidado que se siente.</p></div><div><b>Contacto</b><p>Teléfono: <a href="tel:+51904881370">904 881 370</a><br>Ubicación: <a href="https://maps.app.goo.gl/HYmAojHSWM44s87d7?g_st=aw" target="_blank" rel="noopener">Asc. Rafael Belaunde Díaz Canseco, Zn. C, Mz. C, Lt. 2, Cayma · Ver mapa</a></p><div class="footLinks"><a href="contacto.html">Ver contacto</a><a href="reservas.html">Reservas</a></div></div><div><b>Síguenos</b><p><a href="https://m.facebook.com/profile.php?id=61567927138250&http_ref=eyJ0cyI6IjE3OTI0MTQyODcwMDQiLCJyIjoiaHR0cHM6XC9cL2FjY291bnRzLmdvb2dsZS5jb21cLyJ9" target="_blank" rel="noopener">Facebook: HAL Garage Car Detailing</a><br><a href="https://www.instagram.com/hal.garage/" target="_blank" rel="noopener">Instagram: @HAL.GARAGE</a></p><div class="footLinks"><a href="galeria.html">Galería</a><a href="club-halito.html">Club HALito</a></div></div></div><div class="wrap note">© <span id="year"></span> HAL Garage. Todos los derechos reservados.</div></footer>
 <script>
 const menuBtn=document.getElementById('menuBtn'),menuPanel=document.getElementById('menuPanel');
