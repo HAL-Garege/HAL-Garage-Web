@@ -30,4 +30,4 @@ document.querySelectorAll('.menuGroup>button').forEach(b=>b.addEventListener('cl
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){menuPanel.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');document.querySelectorAll('.menuGroup.expanded').forEach(g=>g.classList.remove('expanded'));}});
 const year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
 document.querySelectorAll('img').forEach(img=>img.addEventListener('error',function(){if(this.dataset.fallbackTried)return;this.dataset.fallbackTried='1';const f=(this.getAttribute('src')||'').split('/').pop();if(f && !this.src.includes('raw.githubusercontent.com'))this.src='https://raw.githubusercontent.com/HAL-Garege/HAL-Garage-Web/main/'+f;}));
-</script></body></html>
+</script><script src="/raspa-popup.js" defer></script></body></html>
